@@ -1,4 +1,4 @@
-package pcCustom.entity;
+package com.sky.pcCustom.entity;
 
 public class User {
     private String name;
