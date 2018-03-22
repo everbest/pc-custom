@@ -2,6 +2,7 @@ package com.sky.pcCustom.dao;
 
 import com.sky.pcCustom.entity.User;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 public interface UserDao {
 

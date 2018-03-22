@@ -21,6 +21,10 @@ public class User {
         this.tokenTime = tokenTime;
     }
 
+    public User() {
+
+    }
+
     public String getName() {
         return name;
     }
