@@ -20,8 +20,8 @@ public class LoginController {
             method = RequestMethod.POST,
             produces = {"application/json;charset=UTF-8"})
     public LogInfo SignIn(@RequestParam("username") String username,@RequestParam("password") String password){
-        logger.error("username:"+username);
-        logger.error("password:"+password);
+        logger.warn("username:"+username);
+        logger.warn("password:"+password);
         return loginService.getUserInfo(username,password);
     }
 

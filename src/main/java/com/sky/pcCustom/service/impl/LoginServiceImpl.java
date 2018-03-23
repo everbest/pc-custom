@@ -19,8 +19,8 @@ public class LoginServiceImpl implements LoginService{
 
     @Override
     public LogInfo getUserInfo(String username, String password) {
-        logger.info("Service---username:"+username);
-        logger.info("Service---password:"+password);
+        logger.warn("Service---username:"+username);
+        logger.warn("Service---password:"+password);
         User user=userDao.queryByNamePw(username,password);
         logger.warn(user.toString());
         LogInfo info=new LogInfo(true,user.getUsername(),user.getToken());
