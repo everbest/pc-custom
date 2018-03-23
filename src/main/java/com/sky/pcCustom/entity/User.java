@@ -3,7 +3,9 @@ package com.sky.pcCustom.entity;
 import java.util.Date;
 
 public class User {
-    private String name;
+    private Long userId;
+
+    private String username;
 
     private String password;
 
@@ -13,24 +15,32 @@ public class User {
 
     private Date tokenTime;
 
-    public User(String name, String password, String token, Date createTime, Date tokenTime) {
-        this.name = name;
+    //blank constructor for mybatis to map
+    public User(){}
+
+    public User(Long userId, String username, String password, String token, Date createTime, Date tokenTime) {
+        this.userId = userId;
+        this.username = username;
         this.password = password;
         this.token = token;
         this.createTime = createTime;
         this.tokenTime = tokenTime;
     }
 
-    public User() {
-
+    public Long getUserId() {
+        return userId;
     }
 
-    public String getName() {
-        return name;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -68,7 +78,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", token='" + token + '\'' +
                 ", createTime=" + createTime +

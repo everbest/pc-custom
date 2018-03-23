@@ -22,7 +22,8 @@ public class LoginServiceImpl implements LoginService{
         logger.info("Service---username:"+username);
         logger.info("Service---password:"+password);
         User user=userDao.queryByNamePw(username,password);
-        LogInfo info=new LogInfo(true,user.getName(),user.getToken());
+        logger.warn(user.toString());
+        LogInfo info=new LogInfo(true,user.getUsername(),user.getToken());
         return info;
     }
 }
